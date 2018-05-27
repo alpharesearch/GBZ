@@ -106,13 +106,7 @@ Wire Wire Line
 Wire Wire Line
 	1250 2200 2400 2200
 Wire Wire Line
-	1250 2500 2400 2500
-Wire Wire Line
-	1250 2600 2400 2600
-Wire Wire Line
 	1250 2800 2400 2800
-Wire Wire Line
-	1250 2900 2400 2900
 Text Label 1250 1200 0    50   ~ 0
 GPIO2(SDA1)
 Text Label 1250 1300 0    50   ~ 0
@@ -250,37 +244,29 @@ Wire Wire Line
 $Comp
 L kicad-rescue:+5V-power #PWR05
 U 1 1 5B073C56
-P 4700 1250
-F 0 "#PWR05" H 4700 1100 50  0001 C CNN
-F 1 "+5V" H 4700 1390 50  0000 C CNN
-F 2 "" H 4700 1250 50  0000 C CNN
-F 3 "" H 4700 1250 50  0000 C CNN
-	1    4700 1250
+P 5950 1100
+F 0 "#PWR05" H 5950 950 50  0001 C CNN
+F 1 "+5V" H 5950 1240 50  0000 C CNN
+F 2 "" H 5950 1100 50  0000 C CNN
+F 3 "" H 5950 1100 50  0000 C CNN
+	1    5950 1100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4700 1250 5150 1250
+	5950 1100 6400 1100
 $Comp
 L kicad-rescue:GND-power #PWR06
 U 1 1 5B07BD8F
-P 4700 1350
-F 0 "#PWR06" H 4700 1100 50  0001 C CNN
-F 1 "GND" H 4700 1200 50  0000 C CNN
-F 2 "" H 4700 1350 50  0000 C CNN
-F 3 "" H 4700 1350 50  0000 C CNN
-	1    4700 1350
+P 5950 1200
+F 0 "#PWR06" H 5950 950 50  0001 C CNN
+F 1 "GND" H 5950 1050 50  0000 C CNN
+F 2 "" H 5950 1200 50  0000 C CNN
+F 3 "" H 5950 1200 50  0000 C CNN
+	1    5950 1200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4700 1350 5150 1350
-Wire Wire Line
-	5150 1600 5150 1500
-Wire Wire Line
-	2900 1600 5150 1600
-Wire Wire Line
-	5150 1100 5150 600 
-Wire Wire Line
-	5150 600  850  600 
+	5950 1200 6400 1200
 Wire Wire Line
 	850  600  850  2700
 Wire Wire Line
@@ -288,12 +274,12 @@ Wire Wire Line
 $Comp
 L New_Library:audio U2
 U 1 1 5B083007
-P 5650 1300
-F 0 "U2" H 5650 1725 50  0000 C CNN
-F 1 "audio" H 5650 1634 50  0000 C CNN
-F 2 "digikey-footprints:8-DIP" H 5650 1300 50  0001 C CNN
-F 3 "" H 5650 1300 50  0001 C CNN
-	1    5650 1300
+P 6900 1150
+F 0 "U2" H 6900 1575 50  0000 C CNN
+F 1 "audio" H 6900 1484 50  0000 C CNN
+F 2 "digikey-footprints:8-DIP" H 6900 1150 50  0001 C CNN
+F 3 "" H 6900 1150 50  0001 C CNN
+	1    6900 1150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -583,19 +569,7 @@ Wire Wire Line
 Wire Wire Line
 	4800 3100 800  3100
 Wire Wire Line
-	800  3100 800  1600
-Wire Wire Line
-	800  1600 2400 1600
-Wire Wire Line
-	750  1700 750  3150
-Wire Wire Line
 	750  3150 2300 3150
-Wire Wire Line
-	4850 3150 4850 2850
-Wire Wire Line
-	4850 2850 5200 2850
-Wire Wire Line
-	750  1700 2400 1700
 Connection ~ 2300 3150
 Wire Wire Line
 	2300 3150 3000 3150
@@ -603,73 +577,120 @@ Connection ~ 3000 3150
 Wire Wire Line
 	3000 3150 4850 3150
 Wire Wire Line
-	5200 2950 4900 2950
-Wire Wire Line
-	4900 2950 4900 3200
-Wire Wire Line
 	4900 3200 700  3200
-Wire Wire Line
-	700  3200 700  1800
-Wire Wire Line
-	700  1800 2400 1800
 $Comp
 L Device:Speaker LS?
 U 1 1 5B0F0D4B
-P 7050 1050
-F 0 "LS?" H 7220 1046 50  0000 L CNN
-F 1 "Speaker" H 7220 955 50  0000 L CNN
-F 2 "" H 7050 850 50  0001 C CNN
-F 3 "~" H 7040 1000 50  0001 C CNN
-	1    7050 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Speaker LS?
-U 1 1 5B0F0DEA
-P 7050 1500
-F 0 "LS?" H 7220 1496 50  0000 L CNN
-F 1 "Speaker" H 7220 1405 50  0000 L CNN
-F 2 "" H 7050 1300 50  0001 C CNN
-F 3 "~" H 7040 1450 50  0001 C CNN
-	1    7050 1500
+P 8650 1050
+F 0 "LS?" H 8820 1046 50  0000 L CNN
+F 1 "Speaker" H 8820 955 50  0000 L CNN
+F 2 "" H 8650 850 50  0001 C CNN
+F 3 "~" H 8640 1000 50  0001 C CNN
+	1    8650 1050
 	1    0    0    -1  
 $EndComp
 $Comp
 L New_Library:Audio-Jack-3_2Switches J?
 U 1 1 5B1023F7
-P 6400 1800
-F 0 "J?" H 6113 1777 50  0000 R CNN
-F 1 "Audio-Jack-3_2Switches" H 6113 1868 50  0000 R CNN
-F 2 "" H 6650 1900 50  0001 C CNN
-F 3 "~" H 6650 1900 50  0001 C CNN
-	1    6400 1800
-	-1   0    0    1   
+P 7950 900
+F 0 "J?" H 7663 877 50  0000 R CNN
+F 1 "Audio-Jack-3_2Switches" H 7663 968 50  0000 R CNN
+F 2 "" H 8200 1000 50  0001 C CNN
+F 3 "~" H 8200 1000 50  0001 C CNN
+	1    7950 900 
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:POT_Dual RV?
 U 1 1 5B10256D
-P 7450 2450
-F 0 "RV?" H 7450 2218 50  0000 C CNN
-F 1 "POT_Dual" H 7450 2127 50  0000 C CNN
-F 2 "" H 7700 2375 50  0001 C CNN
-F 3 "~" H 7700 2375 50  0001 C CNN
-	1    7450 2450
-	1    0    0    -1  
+P 5600 1200
+F 0 "RV?" H 5600 968 50  0000 C CNN
+F 1 "POT_Dual" H 5600 877 50  0000 C CNN
+F 2 "" H 5850 1125 50  0001 C CNN
+F 3 "~" H 5850 1125 50  0001 C CNN
+	1    5600 1200
+	0    1    1    0   
 $EndComp
 $Comp
 L kicad-rescue:GND-power #PWR?
 U 1 1 5B102765
-P 7450 2550
-F 0 "#PWR?" H 7450 2300 50  0001 C CNN
-F 1 "GND" H 7450 2400 50  0000 C CNN
-F 2 "" H 7450 2550 50  0000 C CNN
-F 3 "" H 7450 2550 50  0000 C CNN
-	1    7450 2550
-	1    0    0    -1  
+P 5500 1200
+F 0 "#PWR?" H 5500 950 50  0001 C CNN
+F 1 "GND" H 5500 1050 50  0000 C CNN
+F 2 "" H 5500 1200 50  0000 C CNN
+F 3 "" H 5500 1200 50  0000 C CNN
+	1    5500 1200
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	7350 2550 7450 2550
+	5500 1300 5500 1200
 Wire Wire Line
-	7550 2550 7450 2550
-Connection ~ 7450 2550
+	5500 1100 5500 1200
+Connection ~ 5500 1200
+Wire Wire Line
+	5500 800  5500 600 
+Wire Wire Line
+	850  600  5500 600 
+Wire Wire Line
+	2900 1600 5500 1600
+Wire Wire Line
+	5700 950  6400 950 
+Wire Wire Line
+	5700 1450 6400 1450
+Wire Wire Line
+	6400 1450 6400 1350
+Wire Wire Line
+	7750 700  7550 700 
+Wire Wire Line
+	7550 700  7550 1050
+Wire Wire Line
+	7550 1050 7400 1050
+Wire Wire Line
+	7550 1050 7550 1350
+Wire Wire Line
+	7550 1350 7400 1350
+Connection ~ 7550 1050
+Wire Wire Line
+	7400 950  7800 950 
+Wire Wire Line
+	7800 950  7800 1350
+Wire Wire Line
+	7800 1350 7950 1350
+Wire Wire Line
+	7950 1350 7950 1100
+Wire Wire Line
+	7400 1250 8050 1250
+Wire Wire Line
+	8050 1250 8050 1100
+Wire Wire Line
+	7750 700  7750 600 
+Wire Wire Line
+	7750 600  8450 600 
+Wire Wire Line
+	8450 600  8450 1050
+Connection ~ 7750 700 
+Wire Wire Line
+	8150 1100 8150 1150
+Wire Wire Line
+	8150 1150 8450 1150
+Wire Wire Line
+	4900 2950 4900 3200
+Wire Wire Line
+	5200 2950 4900 2950
+Wire Wire Line
+	4850 3150 4850 2850
+Wire Wire Line
+	4850 2850 5200 2850
+Wire Wire Line
+	800  3100 800  2900
+Wire Wire Line
+	800  2900 2400 2900
+Wire Wire Line
+	750  3150 750  2600
+Wire Wire Line
+	750  2600 2400 2600
+Wire Wire Line
+	700  3200 700  2500
+Wire Wire Line
+	700  2500 2400 2500
 $EndSCHEMATC
