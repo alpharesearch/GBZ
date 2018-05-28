@@ -4,7 +4,29 @@ Gameboy Zero OS documentaion.
 * install retropie
 * setup ssh with out password and cert only
 
-add this to the end of config.txt in boot directory to enable sound and configure keys:
+If you don't have keys yet you can use ssh-keygen and you may need to use ssh-add to add the key to your key ring.
+
+For example if your Pi is at 192.168.1.1
+
+ssh-copy-id pi@192.168.1.1
+
+ssh pi@192.168.1.1
+
+Open up the SSHD config file on the pi via ssh:
+sudo mcedit /etc/ssh/sshd_config
+
+Change these parameters to no
+ChallengeResponseAuthentication no
+PasswordAuthentication no
+UsePAM no
+
+Reload SSHD on Pi
+sudo /etc/init.d/ssh reload
+
+Now your Pi should be secured.
+
+
+Add this to the end of config.txt in boot directory to enable sound and configure keys:
 
 dtoverlay=pwm-2chan,pin=18,func=2,pin2=13,func2=4
 
@@ -24,4 +46,4 @@ dtoverlay=gpio-key,gpio=26,keycode=45,label="KEY_X" #A
 dtoverlay=gpio-key,gpio=5,keycode=16,label="KEY_Q" #LS
 dtoverlay=gpio-key,gpio=6,keycode=17,label="KEY_W" #RS
 
-could not get the generic overlay working in the emulator, so I installed https://github.com/adafruit/Adafruit-Retrogame
+Now, I could not get the generic overlay working in the emulator, so I installed https://github.com/adafruit/Adafruit-Retrogame and removed the gpio-key dtoverlays... but I this the generic methode should work too. I will need investige more.
